@@ -327,7 +327,7 @@ impl Config {
             mode: self.mode,
             title: &options.title,
             description: &options.description,
-            languages: self.languages.iter().filter(|(k, _)| k.as_str() != lang).collect(),
+            languages: self.languages.iter().filter(|(k, _)| k.as_str() == lang).collect(),
             default_language: &self.default_language,
             generate_feed: options.generate_feeds,
             generate_feeds: options.generate_feeds,
